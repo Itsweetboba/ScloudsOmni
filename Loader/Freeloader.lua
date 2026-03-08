@@ -1,6 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v10 - LOADER ENGINE
--- 🛡️ Secure Bridge for Sclouds Digital Services
+-- 🚀 SCLOUDS-OMNI v10 - LOADER ENGINE (HARDCORE FIXED)
 -- =============================================================
 
 local function decode(str)
@@ -16,19 +15,16 @@ local function decode(str)
     end))
 end
 
--- Decoded Strings
+-- Hasil Decode
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
--- Clear Terminal & Header
 os.execute("clear")
-print("\27[0;36m====================================================\27[0m")
-print("\27[1;33m          SCLOUDS-OMNI DIGITAL SERVICES             \27[0m")
-print("\27[0;36m====================================================\27[0m")
-print(" Connecting to Sclouds Server...")
+print("Connecting to Sclouds Server...")
 
-local timestamp = os.time()
-local final_url = target .. "?v=" .. timestamp
-local cmd = "curl -sL -k -A '" .. ident .. "' '" .. final_url .. "' | bash"
 
+local final_url = target .. "?v=" .. os.time()
+local cmd = string.format("curl -sL -k -H 'User-Agent: %s' '%s' | bash", ident, final_url)
+
+-- Eksekusi
 os.execute(cmd)
