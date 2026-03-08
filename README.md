@@ -1,7 +1,7 @@
 # 🦁 SCLOUDS-OMNI
 > **The Ultimate Infrastructure Suite for Digital Entrepreneurs.**
 
-[![System Status](https://img.shields.io/badge/System-Operational-3fb950?style=for-the-badge&logo=statuspage)](https://setup.rdp.n8n.kuma.api.sclouds.web.id/setup.sh)
+[![System Status](https://img.shields.io/badge/System-Operational-3fb950?style=for-the-badge&logo=statuspage)](https://setup.rdp.n8n.kuma.api.sclouds.web.id)
 [![Platform](https://img.shields.io/badge/OS-Ubuntu_22.04+-blue?style=for-the-badge&logo=ubuntu)](https://ubuntu.com)
 
 **Sclouds Omni** adalah framework otomasi *all-in-one* yang dirancang khusus untuk skalabilitas bisnis digital. Script ini melakukan deploy ekosistem lengkap mulai dari VPN Management, Automation Hub, hingga Cloud Browser (RDP) dalam satu baris perintah.
