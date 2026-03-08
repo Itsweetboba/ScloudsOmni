@@ -71,8 +71,10 @@ Script ini mengintegrasikan layanan kelas industri terbaik untuk menunjang opera
 
 ## ✨ Current Version
 
-***Freeloader Version:** V10
-***Oncoming Premium Version:** V12
+***Freeloader Version:** V10.
+***Oncoming Premium Version:** V12.
+
+---
 
 ## 🚀 Future Updates
 * [ ] Pelican Panel (??)
