@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v12 - FREELOADER (DEBUG)
+-- 🚀 SCLOUDS-OMNI v10 - FREELOADER (DEBUG)
 -- =============================================================
 
 local function decode(str)
