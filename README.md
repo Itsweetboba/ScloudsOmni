@@ -13,7 +13,7 @@
 Gunakan perintah (freeloader) di bawah ini pada VPS bersih (**Fresh Install**). Pastikan DNS sudah diarahkan ke IP server sebelum mengeksekusi.
 
 ```bash
-Please Wait Until The Freeloader has been tested, we provide your vps safe and clean
+Please Wait Until The Freeloader has been tested, we provide your vps safe and clean (Do Not Run The Lua Code, Its Not User Iput, may broke your vps!)
 ```
 
 ---
