@@ -48,12 +48,12 @@ Script ini mengintegrasikan layanan kelas industri terbaik untuk menunjang opera
 * **OS:** Ubuntu 22.04 LTS atau lebih tinggi.
 * **Resources:** Minimal 2GB RAM (Recommended 4GB+ for Kasm).
 * **DNS Setup:** Buat 6 Subdomain (Type A) yang mengarah ke IP VPS Anda:
-1. `marzban.sclouds.web.id`
-2. `node.sclouds.web.id`
-3. `n8n.sclouds.web.id`
-4. `kasm.sclouds.web.id`
-5. `monitor.sclouds.web.id`
-6. `files.sclouds.web.id`
+1. `marzban.domainanda.com`
+2. `node.domainanda.com`
+3. `n8n.domainanda.com`
+4. `kasm.domainanda.com`
+5. `monitor.domainanda.com`
+6. `files.domainanda.com`
 
 **Jika kalian pengen mengakses seluruh website tersebut tanpa menulusuri 1 per 1 kalian bisa minta source code dari @paii_event (di discord yah).**
 
@@ -63,7 +63,7 @@ Script ini mengintegrasikan layanan kelas industri terbaik untuk menunjang opera
 
 ## 📝 Critical Notes
 
-* **Hardcoded Config:** Script ini menggunakan konfigurasi *hardcoded* untuk domain `sclouds.web.id`.
+* **Hardcoded Config:** Script ini menggunakan konfigurasi *hardcoded* untuk domain anda.
 * **Auto-Optimization:** Mengaktifkan SWAP 2GB secara otomatis untuk mencegah *crash* pada sistem RAM rendah.
 * **Security:** Dilengkapi dengan Fail2Ban dan Firewall (UFW) yang sudah terkonfigurasi.
 
@@ -78,7 +78,10 @@ Script ini mengintegrasikan layanan kelas industri terbaik untuk menunjang opera
 
 ## 🚀 Future Updates
 * [ ] Pelican Panel (??)
-* [ ] Clear All Modules (Freeloader & Premium)
+* [ ] Clear All Modules (Freeloader & Premium Loader)
 * [ ] Installing Using Apikey (Premium Access)
+* [ ] Mail Forge (Premium Loader)
+* [ ] Streams (Premium Loader)
+* [ ] Create Subdomain Access (Premium Loader)
 
 **Created with ❤️ by Paii & SeraPH (Sclouds Corporation)**
